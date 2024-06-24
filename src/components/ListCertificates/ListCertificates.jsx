@@ -24,7 +24,7 @@ const ListCertificates = () => {
           backgroundImage:
             " linear-gradient(268.87deg,#8854e15e 0.14%,#8854e13c 99.81%)",
         }}
-        className="relative xs:w-[90%] md:w-[70%] mx-auto rounded-lg shadow-md min-h-[400px] my-5"
+        className="relative xs:w-[90%] md:w-[70%] mx-auto rounded-lg shadow-md min-h-[450px] my-5"
       >
         {certificate.map((cert, index) => {
           return (
