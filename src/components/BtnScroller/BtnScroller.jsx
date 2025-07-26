@@ -1,15 +1,33 @@
+import { useEffect, useState } from "react";
 import { animateScroll as scroll } from "react-scroll";
 import { HiArrowUpCircle } from "react-icons/hi2";
 
 const BtnScroller = () => {
-  const scrollToTop = () => {
-    scroll.scrollToTop();
+  const [isVisible, setIsVisible] = useState(false);
+
+  const handleScroll = () => {
+    setIsVisible(window.scrollY > 300);
   };
+
+  const scrollToTop = () => {
+    scroll.scrollToTop({ duration: 500, smooth: true });
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <HiArrowUpCircle
+    <button
       onClick={scrollToTop}
-      className="z-50 fixed bottom-2 right-2 w-10 h-10 rounded-md text-bgColorBtn cursor-pointer"
-    />
+      title="Scroll to top"
+      className={`fixed bottom-4 right-4 z-50 transition-opacity duration-300 ${
+        isVisible ? "opacity-100" : "opacity-0 pointer-events-none"
+      }`}
+    >
+      <HiArrowUpCircle className="w-10 h-10 text-bgColorBtn hover:scale-110 transition-transform" />
+    </button>
   );
 };
 

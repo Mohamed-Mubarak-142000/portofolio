@@ -51,7 +51,10 @@ const DetailProject = () => {
     >
       <Navbar />
       <div className="xs:w-[90%] md:w-[80%] mx-auto my-20">
-        <VideoProject videoProject={project.video} />
+        <VideoProject
+          videoProject={project.video}
+          imageProject={project.imageProject}
+        />
         <div className="my-10 ">
           <InfoProject project={project} />
           <AllSkills project={project} />

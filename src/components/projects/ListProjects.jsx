@@ -6,7 +6,7 @@ const ListProjects = () => {
   return (
     <div className="project xs:w-[90%] lg:w-[80%] mx-auto">
       <TitleSection title={"All Projects"} />
-      <div className="flex items-center xs:justify-center xs:gap-10 lg:justify-center flex-wrap my-20 ">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 my-20 ">
         {data.map((pro) => {
           return <OneProject key={pro.id} pro={pro} />;
         })}

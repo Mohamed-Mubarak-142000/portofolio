@@ -1,18 +1,25 @@
+/* eslint-disable react/no-unescaped-entities */
 import TitleSection from "../common/TitleSection";
 
 const InfoMe = () => {
   return (
     <div>
       <TitleSection title={"about me"} />
-      <p className="text-[18px] text-center text-primaryText px-10 my-5 w-[95%] md:w-[80%] mx-auto">
-        I am 24 years old. I graduated from the Faculty of Computers and
-        Information, Menoufia University, with a good grade in 2022. I finished
-        my military service in 2023. I work as a front-end designer using React
-        JS. I received training from the ITI Institute for 120 hours. I designed
-        websites such as an online store to sell products and use electronic
-        payment methods. It is a site that sells courses, an Islamic site, and
-        displays Qurans and hadiths..., Now I am a trainee at the ITI Institute
-        for 3 months.
+      <p className="text-[20px] text-primaryText px-10 my-5 w-full">
+        Hello, my name is Mohamed Mubarak , and I’m a Front-End Developer
+        specializing in building responsive, user-friendly web applications With
+        a Bachelor's degree in Computer Science from Menoufia University. My
+        skills lies in technologies like : •Frontend Mastery: React.js, Redux
+        Toolkit, TypeScript, Tailwind CSS, Bootstrap, React Bootstrap, Styled
+        Components, React Skeleton, Zod Validation, Next.js ,Zustand, React
+        Query, •Backend Acumen: Express.js, MongoDB,prisma , postgres •Secure
+        Authentication: Firebase, Clerk Auth, •API Development: Skilled in
+        designing and implementing robust RESTful API endpoints. I pride myself
+        on my problem-solving skills and my collaborative spirit, thriving in
+        team environments where effective communication and adaptability are
+        key. My passion for learning and staying current with the latest
+        industry trends drives me to continuously improve and deliver
+        high-quality solutions.
       </p>
     </div>
   );

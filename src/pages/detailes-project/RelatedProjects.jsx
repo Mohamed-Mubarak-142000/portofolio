@@ -5,7 +5,7 @@ const RelatedProjects = ({ projectRelated }) => {
   return (
     <div>
       <TitleSection title={"related projects"} />
-      <div className="flex items-center xs:justify-center flex-wrap md:justify-start gap-10 my-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 my-10">
         {projectRelated.map((pro) => {
           return <OneProject pro={pro} key={pro.id} />;
         })}

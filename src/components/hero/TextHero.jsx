@@ -1,6 +1,8 @@
+/* eslint-disable react/no-unescaped-entities */
 import { motion } from "framer-motion";
 import cvFile from "../../assets/cvFile.pdf";
 import TextAnimation from "./TextAnimation";
+import Description from "./description";
 const TextHero = ({ visible }) => {
   return (
     <motion.div
@@ -11,12 +13,7 @@ const TextHero = ({ visible }) => {
       className="xs:w-full xs:gap-1 md:w-[40%] flex flex-col gap-5"
     >
       <TextAnimation visible={visible} />
-      <h2 className="text-secondaryText xs:text-[15px] md:text-[1.5rem]">
-        Welcome to my portfolio. I'm passionate about building beautiful user
-        interfaces and specialize in creating high-quality, responsive websites
-        and web applications.
-      </h2>
-
+      <Description />
       <a
         href={cvFile}
         download="cvFile.pdf"

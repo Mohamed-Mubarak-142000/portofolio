@@ -12,6 +12,9 @@ export default {
         secondaryText: "var(--secondaryText)",
         border: "var(--border)",
       },
+      animation: {
+        "spin-slow": "spin 10s linear infinite",
+      },
     },
     screens: {
       xs: "300px",

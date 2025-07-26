@@ -1,52 +1,52 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { motion } from "framer-motion";
 
 const TextAnimation = ({ visible }) => {
   const title =
-    "Hi 👋, my name is Mohamed Mubarak. I work as a Frontend Developer specializing in React js.";
+    "Hi 👋, my name is Mohamed Mubarak. I work as a Frontend Developer React js @Innovatek.";
 
-  // Variants for character animation
   const characterVariants = {
     hidden: { opacity: 0 },
     visible: { opacity: 1 },
   };
 
-  const splitText = (text) =>
-    text.split("").map((char, index) => ({
-      char,
-      id: `${char}-${index}`,
-    }));
+  const titleChars = useMemo(
+    () =>
+      title.split("").map((char, index) => ({
+        char,
+        id: `${char}-${index}`,
+      })),
+    [title]
+  );
 
-  const [titleChars, setTitleChars] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const intervalRef = useRef(null);
 
   useEffect(() => {
     if (visible) {
-      setTitleChars(splitText(title));
-    }
-  }, [visible, title]);
+      setCurrentIndex(0); // Reset on re-entry
 
-  useEffect(() => {
-    let intervalId;
-    if (visible) {
-      intervalId = setInterval(() => {
-        setCurrentIndex((prevIndex) =>
-          prevIndex === title.length - 1 ? 0 : prevIndex + 1
+      intervalRef.current = setInterval(() => {
+        setCurrentIndex((prev) =>
+          prev === title.length - 1 ? title.length - 1 : prev + 1
         );
-      }, 100);
+      }, 200); // faster animation
+
+      return () => clearInterval(intervalRef.current);
+    } else {
+      clearInterval(intervalRef.current);
     }
-    return () => clearInterval(intervalId);
-  }, [visible]);
+  }, [visible, title.length]);
 
   return (
-    <motion.div className="w-[100%] flex flex-col gap-5">
-      <motion.h1 className="xs:text-[20px] md:text-[2rem] text-primaryText capitalize">
+    <motion.div className="w-full flex flex-col gap-5">
+      <motion.h1 className="xs:text-[20px] md:text-[2rem] text-primaryText leading-relaxed">
         {titleChars.map(({ char, id }, index) => (
           <motion.span
             key={id}
             variants={characterVariants}
-            animate={visible && index <= currentIndex ? "visible" : "hidden"}
             initial="hidden"
+            animate={visible && index <= currentIndex ? "visible" : "hidden"}
           >
             {char}
           </motion.span>
