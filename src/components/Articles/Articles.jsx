@@ -3,11 +3,11 @@ import TitleSection from "../common/TitleSection";
 import { Link } from "react-router-dom";
 const Articles = () => {
   return (
-    <section className="artical py-10 mt-[-20px]">
+    <section className="artical py-10">
       <TitleSection title={"my Articles"} />
-      <div className=" w-[82%] mx-auto mt-10 flex items-center justify-center xs:flex-wrap-reverse gap-5">
-        <div className="xs:w-[90%] md:w-[40%] h-[400px] mx-auto ">
-          <p className="text-[22px] mt-10 text-primaryText">
+      <div className="w-[82%] mx-auto mt-10 flex items-center justify-center xs:flex-wrap-reverse gap-5">
+        <div className=" md:w-[40%] h-[400px] mx-auto ">
+          <p className="text-[16px] lg:text-[22px] mt-5 text-primaryText">
             This is a documentation explaining programming concepts in general,
             in addition to some topics specific to specific concepts and
             explaining parts of the code that I use in my projects from my point
@@ -23,7 +23,7 @@ const Articles = () => {
           </div>
         </div>
 
-        <div className="xs:w-[90%] md:w-[40%] h-[400px] mx-auto ">
+        <div className="md:w-[40%] xs:h-[300px] lg:h-[400px] mx-auto">
           <img src={ImageArticle} alt="" className="w-full h-full" />
         </div>
       </div>

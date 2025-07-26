@@ -9,7 +9,7 @@ const AllSkills = ({ project }) => {
           return (
             <div
               key={skill.id}
-              className="border border-secondaryText xs:w-[180px] md:w-[200px] capitalize text-primaryText hover:bg-secondaryText cursor-pointer rounded-2xl p-2"
+              className="border border-secondaryText xs:w-[150px] md:w-[200px] capitalize text-primaryText hover:bg-secondaryText cursor-pointer rounded-2xl p-2"
             >
               {skill.nameSkill}
             </div>

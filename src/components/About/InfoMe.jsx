@@ -5,7 +5,7 @@ const InfoMe = () => {
   return (
     <div>
       <TitleSection title={"about me"} />
-      <p className="text-[20px] text-primaryText px-10 my-5 w-full">
+      <p className="text-[16px] lg:text-[20px] px-5 xs:leading-6 lg:leading-8 text-primaryText xs:my-3 lg:my-5 w-full">
         Hello, my name is Mohamed Mubarak , and I’m a Front-End Developer
         specializing in building responsive, user-friendly web applications With
         a Bachelor's degree in Computer Science from Menoufia University. My

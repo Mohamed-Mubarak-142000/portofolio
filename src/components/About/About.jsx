@@ -5,7 +5,7 @@ import Trainnig from "./Trainnig";
 const About = () => {
   return (
     <section className="about">
-      <div className="xs:w-full md:w-[82%] leading-10 pt-4 mx-auto">
+      <div className="xs:w-full md:w-[82%] leading-10 lg:pt-4 mx-auto">
         <InfoMe />
         <CardInfo />
         <Trainnig />

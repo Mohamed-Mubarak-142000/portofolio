@@ -15,7 +15,7 @@ const VideoProject = ({ videoProject, imageProject }) => {
       <img
         src={imageProject[0].image}
         alt="project"
-        className="w-2/3 mx-auto h-[600px] rounded-md object-fit"
+        className="lg:w-2/3 mx-auto xs:h-52 lg:h-[600px] rounded-md object-fit"
       />
     );
   }
